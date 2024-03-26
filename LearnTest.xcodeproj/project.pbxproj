@@ -16,6 +16,8 @@
 		019D18262BB2C32100016E8C /* LearnTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D18252BB2C32100016E8C /* LearnTestTests.swift */; };
 		019D18302BB2C32100016E8C /* LearnTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D182F2BB2C32100016E8C /* LearnTestUITests.swift */; };
 		019D18322BB2C32100016E8C /* LearnTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D18312BB2C32100016E8C /* LearnTestUITestsLaunchTests.swift */; };
+		019D183F2BB2C3CC00016E8C /* SignUpFromModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D183E2BB2C3CC00016E8C /* SignUpFromModelValidator.swift */; };
+		019D18412BB2C4B200016E8C /* SignUpFromModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D18402BB2C4B200016E8C /* SignUpFromModelValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		019D182B2BB2C32100016E8C /* LearnTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		019D182F2BB2C32100016E8C /* LearnTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTestUITests.swift; sourceTree = "<group>"; };
 		019D18312BB2C32100016E8C /* LearnTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		019D183E2BB2C3CC00016E8C /* SignUpFromModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFromModelValidator.swift; sourceTree = "<group>"; };
+		019D18402BB2C4B200016E8C /* SignUpFromModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFromModelValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				019D18172BB2C32100016E8C /* Assets.xcassets */,
 				019D18192BB2C32100016E8C /* LaunchScreen.storyboard */,
 				019D181C2BB2C32100016E8C /* Info.plist */,
+				019D183E2BB2C3CC00016E8C /* SignUpFromModelValidator.swift */,
 			);
 			path = LearnTest;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				019D18252BB2C32100016E8C /* LearnTestTests.swift */,
+				019D18402BB2C4B200016E8C /* SignUpFromModelValidatorTests.swift */,
 			);
 			path = LearnTestTests;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 			files = (
 				019D18132BB2C32000016E8C /* ViewController.swift in Sources */,
 				019D180F2BB2C32000016E8C /* AppDelegate.swift in Sources */,
+				019D183F2BB2C3CC00016E8C /* SignUpFromModelValidator.swift in Sources */,
 				019D18112BB2C32000016E8C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019D18412BB2C4B200016E8C /* SignUpFromModelValidatorTests.swift in Sources */,
 				019D18262BB2C32100016E8C /* LearnTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
