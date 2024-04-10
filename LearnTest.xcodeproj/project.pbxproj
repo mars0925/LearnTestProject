@@ -21,6 +21,7 @@
 		01A60FD52BB56C6300ED4E23 /* SignupWebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A60FD42BB56C6300ED4E23 /* SignupWebServiceTests.swift */; };
 		01A60FD72BB56D2F00ED4E23 /* SignupWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A60FD62BB56D2F00ED4E23 /* SignupWebService.swift */; };
 		01A60FD92BB56EB500ED4E23 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A60FD82BB56EB500ED4E23 /* SignupModel.swift */; };
+		01C245882BBBF83000E9FE71 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C245872BBBF83000E9FE71 /* MockURLProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		01A60FD42BB56C6300ED4E23 /* SignupWebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebServiceTests.swift; sourceTree = "<group>"; };
 		01A60FD62BB56D2F00ED4E23 /* SignupWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupWebService.swift; sourceTree = "<group>"; };
 		01A60FD82BB56EB500ED4E23 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		01C245872BBBF83000E9FE71 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				019D183E2BB2C3CC00016E8C /* SignUpFromModelValidator.swift */,
 				01A60FD62BB56D2F00ED4E23 /* SignupWebService.swift */,
 				01A60FD82BB56EB500ED4E23 /* SignupModel.swift */,
+				01C245872BBBF83000E9FE71 /* MockURLProtocol.swift */,
 			);
 			path = LearnTest;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01C245882BBBF83000E9FE71 /* MockURLProtocol.swift in Sources */,
 				01A60FD72BB56D2F00ED4E23 /* SignupWebService.swift in Sources */,
 				019D18132BB2C32000016E8C /* ViewController.swift in Sources */,
 				019D180F2BB2C32000016E8C /* AppDelegate.swift in Sources */,
