@@ -26,6 +26,7 @@ final class SignupWebServiceTests: XCTestCase {
         sut = nil
         signModel = nil
         MockURLProtocol.stubResponseData = nil
+        MockURLProtocol.error = nil
     }
     
     //測試登入成功

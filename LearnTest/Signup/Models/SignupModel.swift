@@ -35,6 +35,12 @@ struct Role:Codable {
     let name, rotk, role: String
 }
 
+
+struct SignupForModel:Codable {
+    let unid,pwd,role:String
+    
+}
+
 enum LoginError:LocalizedError, Equatable {
     case ParseJsonError,invalidURL,failedRequest(description:String)
     
