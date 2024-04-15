@@ -37,7 +37,7 @@ struct Role:Codable {
 
 
 struct SignupForModel:Codable {
-    let unid,pwd,role:String
+    let unid,pwd,role,firstName,lastName,email,password,reapPassword:String
     
 }
 
