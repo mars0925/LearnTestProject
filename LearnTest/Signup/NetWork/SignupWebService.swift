@@ -8,7 +8,9 @@
 import Foundation
 
 
-class SignupWebService {
+class SignupWebService:SignupWebServiceProtocol {
+
+    
     private var urlString:String
     private var urlSession:URLSession
     init(urlString:String,urlSession:URLSession = .shared){
@@ -16,7 +18,7 @@ class SignupWebService {
         self.urlSession = urlSession
     }
     
-    func signup(signupModel:SignupModel,completionhandler:@escaping (LoginResult?,LoginError?) -> Void){
+    func signup(signupModel:SignupForModel,completionhandler:@escaping (LoginResult?,LoginError?) -> Void){
         guard let url = URL(string: urlString) else {
             completionhandler(nil,LoginError.invalidURL)
             return

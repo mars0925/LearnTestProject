@@ -11,14 +11,15 @@ import XCTest
 
 final class SignupWebServiceTests: XCTestCase {
     var sut:SignupWebService!
-    var signModel:SignupModel!
+    var signModel:SignupForModel!
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let config = URLSessionConfiguration.ephemeral
         config.protocolClasses = [MockURLProtocol.self]
         let mockUrlSession = URLSession(configuration: config)
         sut = SignupWebService(urlString:login_url, urlSession: mockUrlSession)
-        signModel = SignupModel(unid: "mars999", pwd: "a123456", role: "pacient")
+//        signModel = SignupModel(unid: "mars999", pwd: "a123456", role: "pacient")
+        signModel = SignupForModel(unid: "mars999", pwd: "a123456", role: "patient", firstName: "Sergey", lastName: "Kargopolov", email: "test@test.com", password: "12345678", reapPassword: "12345678")
     }
 
     override func tearDownWithError() throws {

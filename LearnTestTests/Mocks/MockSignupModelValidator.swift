@@ -3,7 +3,7 @@
 //  LearnTestTests
 //
 //  Created by 張宮豪 on 2024/4/12.
-//
+//  假的驗證類別提供單元測試使用
 
 import Foundation
 @testable import LearnTest

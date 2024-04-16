@@ -9,10 +9,12 @@ import Foundation
 
 class SignupPresenter {
     private var formModelValidator:SignupModelValidatorProtocol
+    private var signupService:SignupWebServiceProtocol
 
     //注入驗證的類別，可以注入測試用的假類別
-    init(formModelValidator:SignupModelValidatorProtocol) {
+    init(formModelValidator:SignupModelValidatorProtocol ,signupService:SignupWebServiceProtocol) {
         self.formModelValidator = formModelValidator
+        self.signupService = signupService
     }
     
     func processUserSignup(formModel signupForModel:SignupForModel){
@@ -36,5 +38,10 @@ class SignupPresenter {
         if !formModelValidator.doPasswordsMatch(password: signupForModel.password, repeatPassword: signupForModel.reapPassword){
             return
         }
+        
+        signupService.signup(signupModel: signupForModel) { loginResult, error in
+            
+        }
+        
     }
 }
