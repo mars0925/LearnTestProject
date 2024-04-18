@@ -8,6 +8,6 @@
 import Foundation
 
 protocol SignupWebServiceProtocol {
-    func signup(signupModel:SignupForModel,completionhandler:@escaping (LoginResult?,LoginError?) -> Void)
+    func signup(signupModel:SignupForModel,completionhandler:@escaping (SignupResponseModel?,SignupError?) -> Void)
     
 }

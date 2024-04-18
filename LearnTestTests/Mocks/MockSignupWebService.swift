@@ -9,8 +9,10 @@ import Foundation
 class MockSignupWebService:SignupWebServiceProtocol{
     var isSignupMethodCalled = false
     
-    func signup(signupModel: LearnTest.SignupForModel , completionhandler: @escaping (LearnTest.LoginResult?, LearnTest.LoginError?) -> Void) {
+    func signup(signupModel: LearnTest.SignupForModel , completionhandler: @escaping (LearnTest.SignupResponseModel?, LearnTest.SignupError?) -> Void) {
         isSignupMethodCalled = true 
+        let responseModel = SignupResponseModel(code: 1)
+        completionhandler(responseModel, nil)
     }
     
     

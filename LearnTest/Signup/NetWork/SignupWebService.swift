@@ -18,9 +18,9 @@ class SignupWebService:SignupWebServiceProtocol {
         self.urlSession = urlSession
     }
     
-    func signup(signupModel:SignupForModel,completionhandler:@escaping (LoginResult?,LoginError?) -> Void){
+    func signup(signupModel:SignupForModel,completionhandler:@escaping (SignupResponseModel?,SignupError?) -> Void){
         guard let url = URL(string: urlString) else {
-            completionhandler(nil,LoginError.invalidURL)
+            completionhandler(nil,SignupError.invalidURL)
             return
         }
         
@@ -33,15 +33,15 @@ class SignupWebService:SignupWebServiceProtocol {
         
         urlSession.dataTask(with: request) { data, response, error in
             if let requestError = error  {
-                completionhandler(nil, LoginError.failedRequest(description: requestError.localizedDescription))
+                completionhandler(nil, SignupError.failedRequest(description: requestError.localizedDescription))
                 return
             }
             
-            if let data = data, let loginResult = try? JSONDecoder().decode(LoginResult.self, from: data){
+            if let data = data, let loginResult = try? JSONDecoder().decode(SignupResponseModel.self, from: data){
                 completionhandler(loginResult, nil)
             }else {
                 //TODO: create a unit test  if error here
-                completionhandler(nil, LoginError.ParseJsonError)
+                completionhandler(nil, SignupError.ParseJsonError)
             }
             
         }

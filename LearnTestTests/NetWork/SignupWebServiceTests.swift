@@ -70,7 +70,7 @@ final class SignupWebServiceTests: XCTestCase {
             //assert
             
             XCTAssertNil(loginResult, "loginResult 應該是nil")
-            XCTAssertEqual(error, LoginError.ParseJsonError,"json格式有錯")//error應該是特定的錯誤
+            XCTAssertEqual(error, SignupError.ParseJsonError,"json格式有錯")//error應該是特定的錯誤
             expectation.fulfill()//expectation在時間內要完成 否則失敗
         }
         self.wait(for: [expectation],timeout: 30)
@@ -84,7 +84,7 @@ final class SignupWebServiceTests: XCTestCase {
         //action
         sut.signup(signupModel: signModel) { (loginResult,error) in
             //assert
-            XCTAssertEqual(error, LoginError.invalidURL, "url無效")
+            XCTAssertEqual(error, SignupError.invalidURL, "url無效")
             XCTAssertNil(loginResult, "loginResult 應該是nil")
             expectation.fulfill()
         }
@@ -97,10 +97,10 @@ final class SignupWebServiceTests: XCTestCase {
         
         let expectation = self.expectation(description: "url請求失敗")
         let errormessage = "The operation couldn’t be completed. (LearnTest.LoginError error 0.)"
-        MockURLProtocol.error = LoginError.failedRequest(description:errormessage)
+        MockURLProtocol.error = SignupError.failedRequest(description:errormessage)
         sut.signup(signupModel: signModel) { signupResponseModel, error in
            
-            XCTAssertEqual(error, LoginError.failedRequest(description:errormessage))
+            XCTAssertEqual(error, SignupError.failedRequest(description:errormessage))
             expectation.fulfill()
         }
         

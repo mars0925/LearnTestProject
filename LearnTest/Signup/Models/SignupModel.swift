@@ -16,7 +16,7 @@ struct SignupModel:Codable {
     
 }
 
-struct LoginResult:Codable {
+struct SignupResponseModel:Codable {
     let code: Int
 //    let rutk, utk01, rurl, jwt: String
 //    let uname, umtoken: String
@@ -41,7 +41,7 @@ struct SignupForModel:Codable {
     
 }
 
-enum LoginError:LocalizedError, Equatable {
+enum SignupError:LocalizedError, Equatable {
     case ParseJsonError,invalidURL,failedRequest(description:String)
     
     var errorDescription:String? {

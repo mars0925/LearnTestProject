@@ -10,11 +10,13 @@ import Foundation
 class SignupPresenter {
     private var formModelValidator:SignupModelValidatorProtocol
     private var signupService:SignupWebServiceProtocol
+    private weak var delegate:SignupViewDelegategateProtocol?
 
     //注入驗證的類別，可以注入測試用的假類別
-    init(formModelValidator:SignupModelValidatorProtocol ,signupService:SignupWebServiceProtocol) {
+    init(formModelValidator:SignupModelValidatorProtocol ,signupService:SignupWebServiceProtocol,delegate:SignupViewDelegategateProtocol) {
         self.formModelValidator = formModelValidator
         self.signupService = signupService
+        self.delegate = delegate
     }
     
     func processUserSignup(formModel signupForModel:SignupForModel){
@@ -39,8 +41,13 @@ class SignupPresenter {
             return
         }
         
-        signupService.signup(signupModel: signupForModel) { loginResult, error in
+        signupService.signup(signupModel: signupForModel) { [weak self ] loginResult, error in
+            guard let loginResult = loginResult,
+                  error == nil else {
+               return
+            }
             
+            self?.delegate?.successfullSignup()
         }
         
     }

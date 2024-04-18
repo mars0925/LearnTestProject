@@ -12,14 +12,14 @@ final class SignupPresenterTests: XCTestCase {
     var mockSignupModelValidator:MockSignupModelValidator!
     var mockSignupWebService:MockSignupWebService!
     var sut:SignupPresenter!
-    
-
+    var mockSignupViewDelegate:MockSignupViewDelegate!
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         signupForModel = SignupForModel(unid: "mars999", pwd: "a123456", role: "patient", firstName: "Sergey", lastName: "Kargopolov", email: "test@test.com", password: "12345678", reapPassword: "12345678")
         mockSignupModelValidator = MockSignupModelValidator()
         mockSignupWebService = MockSignupWebService()
-        sut = SignupPresenter(formModelValidator:mockSignupModelValidator, signupService: mockSignupWebService)
+        mockSignupViewDelegate = MockSignupViewDelegate()
+        sut = SignupPresenter(formModelValidator:mockSignupModelValidator, signupService: mockSignupWebService,delegate:mockSignupViewDelegate)
     }
 
     override func tearDownWithError() throws {
@@ -28,6 +28,7 @@ final class SignupPresenterTests: XCTestCase {
         mockSignupModelValidator = nil
         mockSignupWebService = nil
         sut = nil
+        mockSignupViewDelegate = nil
     }
     
     func testSignupPresenter_WhenInfomationProvided_WillValidateEachProperty(){
@@ -60,5 +61,15 @@ final class SignupPresenterTests: XCTestCase {
         
     }
 
+    func testSignupPresenter_WhenSignupOperationSuccessful_CallsSucessOnViewDelegate(){
+        //arrage
+        let myExpectation = expectation(description: "expected the successfulSignUP() method to be called")
+        mockSignupViewDelegate.expectation = myExpectation
+        
+        //act
+        sut.processUserSignup(formModel: signupForModel)
+        self.wait(for: [myExpectation],timeout: 5)
+        //assert
+    }
 
 }
