@@ -8,11 +8,19 @@ import Foundation
 @testable import LearnTest
 class MockSignupWebService:SignupWebServiceProtocol{
     var isSignupMethodCalled = false
+    var shouldReturnError = false
     
     func signup(signupModel: LearnTest.SignupForModel , completionhandler: @escaping (LearnTest.SignupResponseModel?, LearnTest.SignupError?) -> Void) {
         isSignupMethodCalled = true 
-        let responseModel = SignupResponseModel(code: 1)
-        completionhandler(responseModel, nil)
+        
+        if shouldReturnError {
+            completionhandler(nil,SignupError.failedRequest(description: "signup request was not successful"))
+        }else{
+            let responseModel = SignupResponseModel(code: 1)
+            completionhandler(responseModel, nil)
+        }
+
+        
     }
     
     

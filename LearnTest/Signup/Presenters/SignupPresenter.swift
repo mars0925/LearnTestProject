@@ -42,8 +42,11 @@ class SignupPresenter {
         }
         
         signupService.signup(signupModel: signupForModel) { [weak self ] loginResult, error in
-            guard let loginResult = loginResult,
+            
+            
+            guard let _ = loginResult,
                   error == nil else {
+                self?.delegate?.errorHandler(error: error!)
                return
             }
             
