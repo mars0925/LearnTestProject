@@ -7,13 +7,13 @@
 
 import Foundation
 
-class SignupPresenter {
+class SignupPresenter:SignupPresenterProtocol {
     private var formModelValidator:SignupModelValidatorProtocol
     private var signupService:SignupWebServiceProtocol
     private weak var delegate:SignupViewDelegategateProtocol?
 
     //注入驗證的類別，可以注入測試用的假類別
-    init(formModelValidator:SignupModelValidatorProtocol ,signupService:SignupWebServiceProtocol,delegate:SignupViewDelegategateProtocol) {
+    required init(formModelValidator:SignupModelValidatorProtocol ,signupService:SignupWebServiceProtocol,delegate:SignupViewDelegategateProtocol) {
         self.formModelValidator = formModelValidator
         self.signupService = signupService
         self.delegate = delegate

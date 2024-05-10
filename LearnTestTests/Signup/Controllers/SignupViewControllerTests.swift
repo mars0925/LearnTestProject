@@ -41,14 +41,25 @@ final class SignupViewControllerTests: XCTestCase {
     ///SignupViewController 初始化時有註冊按鈕
     func testSignupViewController_WhenCreated_hasSignupButtonAndAction() throws{
         let signupButton = try XCTUnwrap(sut.signupButton,"signupButton not connect to IBOutlet")
-//        let signupButtonActions = signupButton.actions(forTarget: sut, forControlEvent: .touchUpInside)
-        
         let signupButtonActions =  try XCTUnwrap(signupButton.actions(forTarget: sut, forControlEvent: .touchUpInside),"sign up button not have any actions assigned to it")
         
         XCTAssertEqual(signupButtonActions.count, 1)
-        XCTAssertEqual(signupButtonActions.first, "tap:")
-//        XCTAssertTrue(signupButtonActions.contains("tap"))//連結的方法名稱是是否為tap
+        XCTAssertEqual(signupButtonActions.first, "tap:", "這個按鈕沒有叫做tap:的action")
+    }
+    
+    ///註冊按鈕是否呼叫 SignupProcess()
+    func testSignupViewController_WhenSignupButtonTapped_InvokesSignupProcess(){
+        //arrange
+        let mockSignupModelValidator =  MockSignupModelValidator()
+        let mockSignupWebService =  MockSignupWebService()
+        let mockSignupViewDelegate =  MockSignupViewDelegate()
         
         
+        let mockSignupPresenter = MockSignupPresenter(formModelValidator: mockSignupModelValidator, signupService: mockSignupWebService, delegate: mockSignupViewDelegate)
+        sut.signupPresenter = mockSignupPresenter // injet mock  SignupPresenter
+        //act
+        sut.signupButton.sendActions(for: .touchUpInside) //送出action
+        //assert
+        XCTAssertTrue(mockSignupPresenter.processUserSignupCalled, "the processUserSignup method was not called on a presenter object when the signup button was tapped")
     }
 }
