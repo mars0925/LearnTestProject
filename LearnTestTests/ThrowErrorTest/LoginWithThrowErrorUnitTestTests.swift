@@ -45,6 +45,16 @@ final class LoginWithThrowErrorUnitTestTests: XCTestCase {
         let firstName = "sherry"
         XCTAssertNoThrow(try sut.isFirstNameValid(firstName),"不應該丟出錯誤")
         XCTAssertTrue(try sut.isFirstNameValid(firstName),"應該是返回true值")
+        
+        //使用do catch
+        do {
+            let _ = try sut.isFirstNameValid("sherry")
+        } catch  {
+            //sherry是有效的,這邊不會跳出錯誤
+            XCTFail("isFirstNameValid 不應該丟出錯誤")
+        }
+        
+        
     }
 
 }
