@@ -15,6 +15,7 @@ class SignupViewController: UIViewController{
     @IBOutlet weak var repeatPasswordTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     var signupPresenter:SignupPresenterProtocol?
+    @IBOutlet weak var nextPageButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         if signupPresenter == nil {
@@ -36,6 +37,15 @@ class SignupViewController: UIViewController{
         
         signupPresenter?.processUserSignup(formModel: model)
     }
+    
+    @IBAction func pushNextViewController(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "SecondViewController") as SecondViewController
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
+    
 }
 
 extension SignupViewController:SignupViewDelegategateProtocol{

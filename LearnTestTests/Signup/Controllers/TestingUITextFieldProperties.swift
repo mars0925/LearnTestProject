@@ -25,9 +25,5 @@ final class TestingUITextFieldProperties: XCTestCase {
     func testPassWordTextField_hasSecueTextEntry() throws {
         let passwordTextField = try XCTUnwrap(sut.passwordTextField , "passwordTextField is not connected")
         XCTAssertTrue(passwordTextField.isSecureTextEntry, "passwordTextField 沒有設定 isSecureTextEntry")
-        
-       
     }
-    
-
 }
