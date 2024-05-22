@@ -54,6 +54,11 @@ extension SignupViewController:SignupViewDelegategateProtocol{
     }
     
     func errorHandler(error: SignupError) {
-        
+        let alert = UIAlertController(title: "Error", message: "type wrong information", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.view.accessibilityIdentifier = "errorAlertDialog"
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
     }
 }

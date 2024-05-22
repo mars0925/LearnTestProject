@@ -42,13 +42,11 @@ struct SignupForModel:Codable {
 }
 
 enum SignupError:LocalizedError, Equatable {
-    case ParseJsonError,invalidURL,failedRequest(description:String)
+    case ParseJsonError,invalidURL,invalidFirstName,invalidLastName,invalidMail,invalidPassword,passwordIsNotMatch,failedRequest(description:String)
     
     var errorDescription:String? {
         switch self {
-        case .ParseJsonError:
-            return ""
-        case .invalidURL:
+        case .ParseJsonError,.invalidURL,.invalidFirstName,.invalidLastName,.invalidMail,.invalidPassword,.passwordIsNotMatch:
             return ""
         case .failedRequest(let description):
             return description

@@ -33,7 +33,7 @@
 		019D18182BB2C32100016E8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 019D18172BB2C32100016E8C /* Assets.xcassets */; };
 		019D181B2BB2C32100016E8C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 019D181A2BB2C32100016E8C /* Base */; };
 		019D18262BB2C32100016E8C /* LearnTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D18252BB2C32100016E8C /* LearnTestTests.swift */; };
-		019D18302BB2C32100016E8C /* LearnTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D182F2BB2C32100016E8C /* LearnTestUITests.swift */; };
+		019D18302BB2C32100016E8C /* SignupFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D182F2BB2C32100016E8C /* SignupFlowUITests.swift */; };
 		019D18322BB2C32100016E8C /* LearnTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D18312BB2C32100016E8C /* LearnTestUITestsLaunchTests.swift */; };
 		019D183F2BB2C3CC00016E8C /* SignUpFromModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D183E2BB2C3CC00016E8C /* SignUpFromModelValidator.swift */; };
 		019D18412BB2C4B200016E8C /* SignUpFromModelValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019D18402BB2C4B200016E8C /* SignUpFromModelValidatorTests.swift */; };
@@ -97,7 +97,7 @@
 		019D18212BB2C32100016E8C /* LearnTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		019D18252BB2C32100016E8C /* LearnTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTestTests.swift; sourceTree = "<group>"; };
 		019D182B2BB2C32100016E8C /* LearnTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		019D182F2BB2C32100016E8C /* LearnTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTestUITests.swift; sourceTree = "<group>"; };
+		019D182F2BB2C32100016E8C /* SignupFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFlowUITests.swift; sourceTree = "<group>"; };
 		019D18312BB2C32100016E8C /* LearnTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		019D183E2BB2C3CC00016E8C /* SignUpFromModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFromModelValidator.swift; sourceTree = "<group>"; };
 		019D18402BB2C4B200016E8C /* SignUpFromModelValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFromModelValidatorTests.swift; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 		019D182E2BB2C32100016E8C /* LearnTestUITests */ = {
 			isa = PBXGroup;
 			children = (
-				019D182F2BB2C32100016E8C /* LearnTestUITests.swift */,
+				019D182F2BB2C32100016E8C /* SignupFlowUITests.swift */,
 				019D18312BB2C32100016E8C /* LearnTestUITestsLaunchTests.swift */,
 			);
 			path = LearnTestUITests;
@@ -536,7 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019D18302BB2C32100016E8C /* LearnTestUITests.swift in Sources */,
+				019D18302BB2C32100016E8C /* SignupFlowUITests.swift in Sources */,
 				019D18322BB2C32100016E8C /* LearnTestUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,35 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pu8-5z-Op6">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pu8-5z-Op6">
                                 <rect key="frame" x="16" y="124" width="361" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="firstNameTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEv-wn-sM4">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IEv-wn-sM4">
                                 <rect key="frame" x="16" y="168" width="361" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lastNameTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yW5-YL-TGR">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yW5-YL-TGR">
                                 <rect key="frame" x="16" y="212" width="361" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYQ-9F-Ufp">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pwssword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYQ-9F-Ufp">
                                 <rect key="frame" x="16" y="256" width="361" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17B-RT-AGp">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17B-RT-AGp">
                                 <rect key="frame" x="16" y="300" width="361" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="repeatPasswordTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yo0-nI-HOG">
-                                <rect key="frame" x="159" y="354" width="75" height="35"/>
+                                <rect key="frame" x="50" y="354" width="293" height="35"/>
+                                <accessibility key="accessibilityConfiguration" identifier="signupButton"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sign up"/>
                                 <connections>
                                     <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfz-zV-CSl"/>
                                 </connections>
@@ -67,14 +73,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pu8-5z-Op6" secondAttribute="trailing" constant="16" id="D5f-3n-6gd"/>
                             <constraint firstItem="17B-RT-AGp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GcI-k5-P9s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYQ-9F-Ufp" secondAttribute="trailing" constant="16" id="J2j-WS-Fmw"/>
-                            <constraint firstItem="Yo0-nI-HOG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="NWA-tr-o05"/>
+                            <constraint firstItem="Yo0-nI-HOG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Ob0-mu-Wfd"/>
                             <constraint firstItem="Pu8-5z-Op6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="PBt-ne-aUP"/>
                             <constraint firstItem="Pu8-5z-Op6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RWP-7i-XIr"/>
                             <constraint firstItem="WYQ-9F-Ufp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="X7k-W8-noB"/>
                             <constraint firstItem="XfZ-Ah-Urx" firstAttribute="top" secondItem="Yo0-nI-HOG" secondAttribute="bottom" constant="64" id="XrA-gv-Nfj"/>
                             <constraint firstItem="Yo0-nI-HOG" firstAttribute="top" secondItem="17B-RT-AGp" secondAttribute="bottom" constant="20" id="Y6L-g3-LuK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yo0-nI-HOG" secondAttribute="trailing" constant="50" id="YDd-OK-nIn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IEv-wn-sM4" secondAttribute="trailing" constant="16" id="caA-LW-cgl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yo0-nI-HOG" secondAttribute="trailing" constant="159" id="dY8-Yk-Ktw"/>
                             <constraint firstItem="yW5-YL-TGR" firstAttribute="top" secondItem="IEv-wn-sM4" secondAttribute="bottom" constant="10" id="gKl-oF-spC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="17B-RT-AGp" secondAttribute="trailing" constant="16" id="k76-NQ-ZWa"/>
                             <constraint firstItem="17B-RT-AGp" firstAttribute="top" secondItem="WYQ-9F-Ufp" secondAttribute="bottom" constant="10" id="kpJ-Vw-UQY"/>
