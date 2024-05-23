@@ -13,4 +13,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func dissmiss(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

@@ -57,6 +57,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfZ-Ah-Urx">
                                 <rect key="frame" x="16" y="453" width="361" height="35"/>
+                                <accessibility key="accessibilityConfiguration" identifier="pushNextViewController"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="push a viewcontroller"/>
                                 <connections>
@@ -119,12 +120,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snc-ux-m7Q">
+                                <rect key="frame" x="50" y="137" width="293" height="40.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Cancel">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dissmiss:" destination="4dw-SG-l7W" eventType="touchUpInside" id="xuZ-52-Pp0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6La-Hx-w0c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="SecondViewController">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="0hC-bO-mAs" firstAttribute="top" secondItem="6La-Hx-w0c" secondAttribute="top" id="0Fj-24-rhx"/>
+                            <constraint firstItem="6La-Hx-w0c" firstAttribute="trailing" secondItem="snc-ux-m7Q" secondAttribute="trailing" constant="50" id="9pM-gP-Cxd"/>
                             <constraint firstItem="0hC-bO-mAs" firstAttribute="leading" secondItem="6La-Hx-w0c" secondAttribute="leading" id="REJ-aw-AGd"/>
+                            <constraint firstItem="snc-ux-m7Q" firstAttribute="top" secondItem="0hC-bO-mAs" secondAttribute="bottom" constant="50.329999999999998" id="dNa-gC-lgG"/>
+                            <constraint firstItem="snc-ux-m7Q" firstAttribute="leading" secondItem="6La-Hx-w0c" secondAttribute="leading" constant="50" id="eDz-fU-n9E"/>
                             <constraint firstItem="6La-Hx-w0c" firstAttribute="trailing" secondItem="0hC-bO-mAs" secondAttribute="trailing" id="ysb-Hc-fWX"/>
                         </constraints>
                     </view>
@@ -155,6 +173,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

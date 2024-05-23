@@ -81,6 +81,29 @@ final class SignupFlowUITests: XCTestCase {
         XCTAssertTrue(app.alerts["errorAlertDialog"].waitForExistence(timeout: 1), "an error alert dialog is not presented when invalid signup form")
     }
     
+    //表格提交正確時，顯示成功提示窗
+    func testSignUpController_WhenValidFormSubmitted_PresentsSuccessAlertDialog(){
+
+        firstName.tap()
+        firstName.typeText("mars999")
+        
+        lastName.tap()
+        lastName.typeText("Change")
+        
+        email.tap()
+        email.typeText("test@gmail.com")
+        
+        password.tap()
+        password.typeText("a123456")
+        
+        repeatPassword.tap()
+        repeatPassword.typeText("a123456")
+        
+        signUpButton.tap()
+        
+        XCTAssertTrue(app.alerts["successAlertDialog"].waitForExistence(timeout: 1), "an success alert dialog is not presented when Valid signup form")
+    }
+    
     
 
     func testLaunchPerformance() throws {
